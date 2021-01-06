@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import * as bs from 'react-bootstrap';
 
+import Toast from "react-common-toast";
+
 import './wxfooter.css';
 
 class Index extends Component {
@@ -12,7 +14,9 @@ class Index extends Component {
     window.getSelection().addRange(range);
     const tag = document.execCommand("Copy");
     if (tag) {
-      console.log('复制成功');
+      Toast.info("复制成功",2000,() => {
+        console.log('回调方法')
+      });
     }
   }
 
@@ -21,7 +25,7 @@ class Index extends Component {
         <div className="wxFooter">
           <bs.ButtonGroup>
             <bs.Button variant="danger" onClick={this.appleCopy}>一键复制口令</bs.Button>
-            <bs.Button variant="success">苹果手机复制</bs.Button>
+            <bs.Button variant="success" onClick={this.appleCopy}>苹果手机复制</bs.Button>
           </bs.ButtonGroup>
         </div>
     );
