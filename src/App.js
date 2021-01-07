@@ -16,7 +16,7 @@ class App extends Component {
         tpwd:''
     }
     componentDidMount() {
-       axios.get("http://localhost:3000/wxapi/couponresp?itemid=" + this.props.location.hash.substr(1)).then(
+       axios.get("/wxapi/couponresp?itemid=" + this.props.location.hash.substr(1)).then(
             response => {
                 console.log('成功了',response.data);
                 this.setState({title:response.data.title,pict_url:response.data.pict_url,tpwd:response.data.tpwd});
