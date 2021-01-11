@@ -1,0 +1,32 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: -webkit-flex; /*在webkit内核的浏览器上使用要加前缀*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide > img {
+  width: 80%;
+}
+
+.slide1 {
+  background-color: red;
+}
+
+.slide2 {
+  background-color: green;
+}
+
+.slide3 {
+  background-color: blue;
+}

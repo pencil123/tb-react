@@ -1,7 +1,6 @@
 import './App.css';
 import React, {Component} from 'react';
 import {BrowserRouter,Route, Switch,Redirect} from 'react-router-dom'
-import DocumentTitle from 'react-document-title'
 
 import WxCourse from './pages/wx/course';
 import WxCoupon from './pages/wx/Coupon';
