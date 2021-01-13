@@ -1,3 +1,60 @@
+.itemlist{
+  background-color: gray;
+  font-size: 14px;
+}
+
+.itemCon{
+  background-color: white;
+  margin: 15px 3px;
+  padding: 8px 5px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemCon > div{
+
+ }
+
 .itemImg{
   width: 100%;
+}
+
+.itemTitle{
+  margin-top: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+.itemLabel{
+  margin-top: 1px;
+}
+.itemLabel span{
+  font-size: 10px;
+  font-weight: lighter;
+  margin-right: 5px;
+}
+
+.itemProg{
+  margin-top: 5px;
+}
+.item_price{
+  background-color: red;
+  margin-top:14px;
+  line-height: 30px;
+  border-radius: 17px;
+  color:white;
+}
+.item_curprice{
+  font-weight: bolder;
+}
+.item_oldprice{
+  font-size: 12px;
+  font-weight: lighter;
+  text-decoration:line-through;
+}
+
+.donow{
+  margin-left: 4px;
 }
