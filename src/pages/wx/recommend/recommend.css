@@ -1,8 +1,29 @@
 .recommCon{
-  background-color: lightgray;
+  background-color: #F0F0F0;
 }
 .recommTitle{
-  height: 30px;
   justify-content: center;
-  background-color: #F54D23;
+  background-color: red;
 }
+.itemfooter{
+  height:36px;
+  line-height: 36px;
+  text-align:center;
+  position:relative;
+  justify-content: center;
+}
+.footercontent{
+  height: 20px;
+}
+
+.footercontent:before,.footercontent:after{
+  position:absolute;
+  background:#ccc;
+  content:"";
+  height:1px;
+  top:50%;
+  width:100px;
+}
+
+.footercontent:before{left:10px;}
+.footercontent:after{right:10px;}
