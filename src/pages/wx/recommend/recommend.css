@@ -5,6 +5,10 @@
   justify-content: center;
   background-color: red;
 }
+.itemlist{
+  font-size: 14px;
+}
+
 .itemfooter{
   height:36px;
   line-height: 36px;
