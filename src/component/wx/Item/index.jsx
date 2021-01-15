@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import * as bs from "react-bootstrap";
 
-import testimg from '../../../assets/temp/test.jpg';
 import './item.css';
 
 class Index extends Component {
@@ -13,10 +12,10 @@ class Index extends Component {
         <bs.Row className="itemCon">
           <bs.Col>
             <a href={"/wx/coupon/#" + item_id}>
-              <bs.Image src={testimg} rounded className="itemImg"/>
+              <bs.Image src={pict_url} rounded className="itemImg"/>
             </a>
           </bs.Col>
-          <bs.Col>
+          <bs.Col className="itemInfo">
             <div>
               <a href={"/wx/coupon/#" + item_id}>
                 <div className="itemTitle">{title}</div>
@@ -32,7 +31,7 @@ class Index extends Component {
                     className="item_curprice">￥{zk_final_price
                 - coupon_amount} / </span><span
                     className="item_oldprice">￥{zk_final_price}</span><span
-                    className="donow">| 立即行动</span>
+                    className="donow">| 购买</span>
                 </a>
               </div>
             </div>
