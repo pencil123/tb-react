@@ -29,7 +29,7 @@ class Index extends Component {
           </bs.Row>
           <div className="itemlist">
             {
-              this.items.map(
+              items.map(
                   item => {
                     return <Item item={item}/>
                   }
