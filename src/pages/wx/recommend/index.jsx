@@ -29,9 +29,9 @@ class Index extends Component {
           </bs.Row>
           <div className="itemlist">
             {
-              items.map(
+              this.state.items.map(
                   item => {
-                    return <Item item={item}/>
+                    return <Item item={item} key={item.item_id}/>
                   }
               )
             }

@@ -17,6 +17,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   font-weight: bold;
+  color: black;
 }
 .itemLabel{
   margin-top: 1px;
