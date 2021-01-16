@@ -7,7 +7,7 @@ class Index extends Component {
   render() {
     const {item_id, title, pict_url, zk_final_price, coupon_total_count, coupon_remain_count, coupon_info, coupon_start_fee, coupon_amount} = this.props.item;
     const now = Math.round(coupon_remain_count / coupon_total_count * 10000)  / 100.00;
-    const final_price = Math.round((zk_final_price - coupon_amount) * 10000) / 100.00;
+    const final_price = Math.round((zk_final_price - coupon_amount) * 100) / 100.00;
     return (
         <bs.Row className="itemCon">
           <bs.Col>
