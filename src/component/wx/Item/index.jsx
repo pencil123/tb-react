@@ -5,31 +5,31 @@ import './item.css';
 
 class Index extends Component {
   render() {
-    const {item_id, title, pict_url, zk_final_price, coupon_total_count, coupon_remain_count, coupon_info, coupon_start_fee, coupon_amount} = this.props.item;
-    const now = Math.round(coupon_remain_count / coupon_total_count * 10000)  / 100.00;
-    const final_price = Math.round((zk_final_price - coupon_amount) * 100) / 100.00;
+    const {itemId, title, pictUrl, zkFinalPrice, couponTotalCount, couponRemainCount, couponInfo, couponStartFee, couponAmount} = this.props.item;
+    const now = Math.round(couponRemainCount / couponTotalCount * 10000)  / 100.00;
+    const finalPrice = Math.round((zkFinalPrice - couponAmount) * 100) / 100.00;
     return (
         <bs.Row className="itemCon">
           <bs.Col>
-            <a href={"/wx/coupon/#" + item_id}>
-              <bs.Image src={pict_url} rounded className="itemImg"/>
+            <a href={"/wx/coupon/#" + itemId}>
+              <bs.Image src={pictUrl} rounded className="itemImg"/>
             </a>
           </bs.Col>
           <bs.Col className="itemInfo">
             <div>
-              <a href={"/wx/coupon/#" + item_id}>
+              <a href={"/wx/coupon/#" + itemId}>
                 <div className="itemTitle">{title}</div>
               </a>
-              <div className="itemLabel"><span>{coupon_info}</span>
+              <div className="itemLabel"><span>{couponInfo}</span>
               </div>
               <div className="itemProg">
                 <bs.ProgressBar animated now={now} label={`剩余  ${now}%`}/>
               </div>
               <div className="item_price">
-                <a href={"/wx/coupon/#" + item_id}>
+                <a href={"/wx/coupon/#" + itemId}>
                 <span
-                    className="item_curprice">￥{final_price} / </span><span
-                    className="item_oldprice">￥{zk_final_price}</span><span
+                    className="item_curprice">￥{finalPrice} / </span><span
+                    className="item_oldprice">￥{zkFinalPrice}</span><span
                     className="donow">| 购买</span>
                 </a>
               </div>

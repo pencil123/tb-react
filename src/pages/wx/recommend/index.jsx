@@ -31,7 +31,7 @@ class Index extends Component {
             {
               this.state.items.map(
                   item => {
-                    return <Item item={item} key={item.item_id}/>
+                    return <Item item={item} key={item.itemId}/>
                   }
               )
             }
