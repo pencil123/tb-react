@@ -25,7 +25,7 @@ class Index extends Component {
     render() {
         return (
             <bs.Container fluid>
-                <WxCouponComp pict_url={this.state.pictUrl} tpwd={this.state.tpwd} />
+                <WxCouponComp pictUrl={this.state.pictUrl} tpwd={this.state.tpwd} />
             </bs.Container>
         );
     }
