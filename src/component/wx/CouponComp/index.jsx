@@ -23,7 +23,7 @@ class Index extends Component {
             <div>
                 <bs.Row>
                     <div className="topimg">
-                        <bs.Image src={`${this.props.pict_url}`} rounded />
+                        <bs.Image src={`${this.props.pictUrl}`} rounded />
                     </div>
                 </bs.Row>
                 <bs.Row>

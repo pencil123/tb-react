@@ -8,7 +8,7 @@ import WxCouponComp from '../../../component/wx/CouponComp/'
 class Index extends Component {
     state = {
         title:'',
-        pict_url:'',
+        pictUrl:'',
         tpwd:''
     }
     componentDidMount() {
@@ -16,7 +16,7 @@ class Index extends Component {
         axios.get("/wxapi/couponresp?itemid=" + this.props.location.hash.substr(1)).then(
             response => {
                 console.log('成功了',response.data);
-                this.setState({title:response.data.title,pict_url:response.data.pict_url,tpwd:response.data.tpwd});
+                this.setState({title:response.data.title,pictUrl:response.data.pictUrl,tpwd:response.data.tpwd});
             },
             error => {console.log('失败了',error);}
         )
@@ -25,7 +25,7 @@ class Index extends Component {
     render() {
         return (
             <bs.Container fluid>
-                <WxCouponComp pict_url={this.state.pict_url} tpwd={this.state.tpwd} />
+                <WxCouponComp pict_url={this.state.pictUrl} tpwd={this.state.tpwd} />
             </bs.Container>
         );
     }
