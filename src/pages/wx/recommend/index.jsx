@@ -13,10 +13,10 @@ class Index extends Component {
   }
   componentDidMount() {
     document.title = "优惠券推荐";
-    axios.get("/wxapi/itemresp?searchid=" + this.props.location.hash.substr(1)).then(
+    axios.get("/api/v1/coupon/searchbyid?searchid=" + this.props.location.hash.substr(1)).then(
         response => {
-          console.log('成功了',response.data);
-          this.setState({items:response.data});
+          console.log('成功了',response.data.data.records);
+          this.setState({items:response.data.data.records});
         },
         error => {console.log('失败了',error);}
     )
